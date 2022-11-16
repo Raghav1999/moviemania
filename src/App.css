@@ -14,7 +14,7 @@
 
 body {
   font-family: var(--font-roboto);
-  background-color: #212426;
+  background-color: #260887;
 }
 
 .app {
@@ -26,12 +26,12 @@ body {
   flex-direction: column;
 }
 
-h1 {
+h1, #by {
   font-size: 3rem;
-  letter-spacing: 0.9px;
+  letter-spacing: 3.9px;
   background: linear-gradient(
-    90deg,
-    rgba(249, 211, 180, 1) 0%,
+  0deg,
+    rgb(222, 187, 158) 0%,
     rgba(249, 211, 180, 0) 100%
   );
   background-clip: text;
@@ -40,19 +40,30 @@ h1 {
   width: fit-content;
 }
 
+#by {
+  font-size: 0.8rem;
+}
+
+#pseudo-top, #bottom {
+  text-decoration: none;
+  color: rgb(222, 187, 158);
+}
+
 .search {
   width: 71%;
   margin: 4rem 0 2rem;
-
+  top: 0;
+  position: sticky !important;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 1.5rem 1.75rem;
+  padding: 1.2rem 1.25rem;
   border-radius: 3rem;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  background: #260887;
+  -webkit-box-shadow: 5px 5px 7px #260887, -5px -5px 7px #260887;
+  box-shadow: 5px 5px 7px #22046f, -5px -5px 7px #2c0887;
 }
 
 .search input {
@@ -65,29 +76,29 @@ h1 {
 
   outline: none;
   color: #a1a1a1;
-  background: #1f2123;
+  background: #260887;
 }
 
-.search img {
-  width: 35px;
-  height: 35px;
+/* .search img {
+  width: 25px;
+  height: 25px;
   cursor: pointer;
-}
+} */
 
-/* .search button {
-  padding: 20px 40px;
+.search button {
+  padding: 10px 20px;
   border-radius: 0.5rem;
-  margin-left: 15px;
+  margin-left: 5px;
   color: #a1a1a1;
   font-family: var(--font-raleway);
   font-weight: 900;
   letter-spacing: 0.75px;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   cursor: pointer;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-} */
+  background: #22046f;
+  -webkit-box-shadow: 5px 5px 7px #22046f, -5px -5px 7px #22046f;
+  box-shadow: 5px 5px 7px #22046f, -5px -5px 7px #22046f;
+}
 
 .empty {
   width: 100%;

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import './App.css';
 import MovieCard from './MovieCard';
-import SearchIcon from './search.svg';
+// import SearchIcon from './search.svg';
 
 const API_URL = 'https://www.omdbapi.com?apikey=7773cf9c';
 
@@ -26,8 +26,9 @@ const App = () => {
     }, [])
     
     return (
-        <div className='app'>
+        <div id='top' className='app'>
             <h1>Moviemania</h1>
+            <span id='by'>By Raghav Sharma</span>
 
             <div className='search'>
                 <input 
@@ -35,14 +36,20 @@ const App = () => {
                   value={ searchText }
                   onChange={(e) => { setSearchText(e.target.value) }} 
                 />
-                <img 
+                <button
+                 alt="search"
+                 onClick={ () => { searchMovies(searchText) } } >Search
+                </button>
+                {/* <img 
                   src={SearchIcon}
                   alt="search"
                   onClick={() => { searchMovies(searchText) }}
-                />
+                /> */}
+                 
             </div>
 
             <div className='container'>
+                <a id='pseudo-top' href='/#bottom'>Go to bottom</a>
                 {
                     movies.length > 0 ? (
                         <div className='container'>
@@ -56,7 +63,8 @@ const App = () => {
                         </div>
                     )
                 }
-            </div>
+            </div><br/><br/>
+            <a id='bottom' href='/#top'>Back to top</a>
         </div>
     )
 }
